@@ -1,0 +1,83 @@
+.home-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #0b3c5d;
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 4px;
+    z-index: 1000;
+}
+
+.home-button:hover {
+    background: #072a42;
+}
+
+
+
+
+.page-title {
+    padding: 30px 40px;
+    background: #e6eef5;
+}
+
+.page-title h1 {
+    color: #0b3c5d;
+}
+
+.search-section {
+    padding: 30px 40px;
+    background: white;
+}
+
+.search-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.search-controls select,
+.search-controls input {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.no-result {
+    color: #b00020;
+    margin-top: 15px;
+    display: none;
+}
+
+.catalog-section {
+    padding: 40px;
+}
+
+.catalog-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.catalog-table th,
+.catalog-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.catalog-table th {
+    background: #0b3c5d;
+    color: white;
+}
+
+.available {
+    color: green;
+    font-weight: bold;
+}
+
+.issued {
+    color: red;
+    font-weight: bold;
+}

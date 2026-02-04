@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #f5f6f7;
+    color: #222;
+}
+
+/* Top Bar */
+.top-bar {
+    background: #1f3c88;
+    color: white;
+    padding: 8px 40px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+/* Header */
+.header {
+    background: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1f3c88;
+}
+
+.header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.header nav a:hover {
+    color: #1f3c88;
+}
+
+/* Banner */
+/* .banner {
+    background: #e9edf5;
+    padding: 60px 40px;
+}
+
+.banner-content {
+    max-width: 800px;
+}
+
+.banner h1 {
+    font-size: 36px;
+    color: #1f3c88;
+}
+
+.banner p {
+    margin: 15px 0 25px;
+    font-size: 18px;
+} */
+
+/* Search */
+.search-area {
+    display: flex;
+    max-width: 600px;
+}
+
+.search-area input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+
+.search-area button {
+    padding: 12px 20px;
+    border: none;
+    background: #1f3c88;
+    color: white;
+    cursor: pointer;
+} 
+
+
+.search-section {
+    padding: 40px;
+    background: #ffffff;
+}
+
+.search-section h2 {
+    margin-bottom: 15px;
+    color: #1f3c88;
+}
+
+#searchInput {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 25px;
+}
+
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.book-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.book-item h3 {
+    margin-bottom: 8px;
+}
+
+
+/* Stats */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    padding: 40px;
+}
+
+.stat-box h2 {
+    color: #1f3c88;
+    font-size: 28px;
+}
+
+.stat-box p {
+    margin-top: 5px;
+}
+
+/* Services */
+.services {
+    padding: 50px 40px;
+}
+
+.services h2 {
+    margin-bottom: 30px;
+    color: #1f3c88;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    background: #1f3c88;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    margin-top: 40px;
+}

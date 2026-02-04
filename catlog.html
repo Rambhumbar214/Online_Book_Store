@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Catalog | Online Book Library</title>
+    <link rel="stylesheet" href="catlogstyle.css">
+</head>
+<body>
+
+
+
+    <!-- <a href="home.html" class="home-icon">🏠</a> -->
+     <a href="home.html" class="home-button">Home</a>
+
+
+
+<!-- Top Bar -->
+<div class="top-bar">
+    <span>Online Book Library System</span>
+    <span>Email: support@library.edu | Help: 1800-111-222</span>
+</div>
+
+<!-- Header -->
+<header class="header">
+    <div class="logo">📚 OBL</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="catalog.html" class="active">Catalog</a>
+        <a href="#">E-Resources</a>
+        <a href="#">Membership</a>
+        <a href="#">Login</a>
+    </nav>
+</header>
+
+<!-- Page Title -->
+<section class="page-title">
+    <h1>Library Catalog</h1>
+    <p>Browse and search available books</p>
+</section>
+
+<!-- Search Section -->
+<section class="search-section">
+    <h2>Search Books</h2>
+
+    <div class="search-controls">
+        <select id="searchType">
+            <option value="all">All</option>
+            <option value="title">Title</option>
+            <option value="author">Author</option>
+            <option value="genre">Genre</option>
+        </select>
+
+        <input type="text" id="searchInput"
+               placeholder="Enter keyword"
+               onkeyup="advancedSearch()">
+    </div>
+
+    <p id="noResult" class="no-result">No matching books found.</p>
+</section>
+
+<!-- Catalog Table -->
+<section class="catalog-section">
+    <table class="catalog-table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Year</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody id="catalogBody">
+
+            <tr class="book-row"
+                data-title="Java Programming"
+                data-author="James Gosling"
+                data-genre="Technology">
+                <td class="book-title">Java Programming</td>
+                <td class="book-author">James Gosling</td>
+                <td class="book-genre">Technology</td>
+                <td>2019</td>
+                <td class="available">Available</td>
+            </tr>
+
+            <tr class="book-row"
+                data-title="Python Basics"
+                data-author="Guido van Rossum"
+                data-genre="Programming">
+                <td class="book-title">Python Basics</td>
+                <td class="book-author">Guido van Rossum</td>
+                <td class="book-genre">Programming</td>
+                <td>2020</td>
+                <td class="issued">Issued</td>
+            </tr>
+
+            <tr class="book-row"
+                data-title="Data Structures"
+                data-author="Mark Allen Weiss"
+                data-genre="Computer Science">
+                <td class="book-title">Data Structures</td>
+                <td class="book-author">Mark Allen Weiss</td>
+                <td class="book-genre">Computer Science</td>
+                <td>2018</td>
+                <td class="available">Available</td>
+            </tr>
+
+            <tr class="book-row"
+                data-title="Web Development"
+                data-author="Tim Berners-Lee"
+                data-genre="Web">
+                <td class="book-title">Web Development</td>
+                <td class="book-author">Tim Berners-Lee</td>
+                <td class="book-genre">Web</td>
+                <td>2021</td>
+                <td class="available">Available</td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>© 2026 Online Book Library System</p>
+</footer>
+
+<script src="catalog.js"></script>
+</body>
+</html>

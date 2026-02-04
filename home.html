@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>National Digital Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <span>National Digital Library System</span>
+        <span>📞 Helpdesk: 1800-123-456</span>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">📚 NDL</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="catlog.html ">catalog</a>
+            <a href="#">E-Resources</a>
+            <a href="#">Membership</a>
+            <a href="#">About</a>
+            <a href="#">Login</a>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div class="banner-content">
+            <h1>National Digital Library</h1>
+            <p>Access academic and professional resources anytime, anywhere</p>
+
+            <!-- <div class="search-area">
+                <input type="text" placeholder="Search books, authors, ISBN">
+                <button>Search</button>
+            </div>
+        </div> -->
+    </section>
+
+
+
+    <!-- Search Section -->
+<section class="search-section">
+    <h2>Search Library Catalog</h2>
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search by title, author, or genre"
+        onkeyup="searchBooks()"
+    >
+
+    <div class="catalog" id="bookCatalog">
+
+        <div class="book-item" data-title="Java Programming"
+             data-author="James Gosling"
+             data-genre="Technology">
+            <h3>Java Programming</h3>
+            <p>Author: James Gosling</p>
+            <p>Genre: Technology</p>
+        </div>
+
+        <div class="book-item" data-title="Python Basics"
+             data-author="Guido van Rossum"
+             data-genre="Programming">
+            <h3>Python Basics</h3>
+            <p>Author: Guido van Rossum</p>
+            <p>Genre: Programming</p>
+        </div>
+
+        <div class="book-item" data-title="Data Structures"
+             data-author="Mark Allen Weiss"
+             data-genre="Computer Science">
+            <h3>Data Structures</h3>
+            <p>Author: Mark Allen Weiss</p>
+            <p>Genre: Computer Science</p>
+        </div>
+
+        <div class="book-item" data-title="Web Development"
+             data-author="Tim Berners-Lee"
+             data-genre="Web">
+            <h3>Web Development</h3>
+            <p>Author: Tim Berners-Lee</p>
+            <p>Genre: Web</p>
+        </div>
+
+    </div>
+</section> 
+
+
+
+
+
+
+
+
+    <!-- Statistics -->
+    <section class="stats">
+        <div class="stat-box">
+            <h2>1M+</h2>
+            <p>Books</p>
+        </div>
+        <div class="stat-box">
+            <h2>50K+</h2>
+            <p>Journals</p>
+        </div>
+        <div class="stat-box">
+            <h2>10K+</h2            >
+            <p>Institutions</p>
+        </div>
+        <div class="stat-box">
+            <h2>24/7</h2>
+            <p>Access</p>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <h2>Library Services</h2>
+
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Online Catalog</h3>
+                <p>Search and browse books, journals, and research papers.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>E-Books & Journals</h3>
+                <p>Access thousands of digital publications.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>User Membership</h3>
+                <p>Register and manage your digital library account.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Research Support</h3>
+                <p>Tools and assistance for academic research.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div>
+            <h4>National Digital Library</h4>
+            <p>Ministry of Education Initiative</p>
+        </div>
+
+        <div>
+            <h4>Quick Links</h4>
+            <p>Privacy Policy</p>
+            <p>Terms of Use</p>
+            <p>Accessibility</p>
+        </div>
+
+        <div>
+            <h4>Contact</h4>
+            <p>Email: support@ndl.gov</p>
+            <p>Phone: 1800-123-456</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
