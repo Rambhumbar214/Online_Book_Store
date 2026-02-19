@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checkout</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body{
+    font-family:Arial;
+    background:#EAEDED;
+    padding:30px;
+}
+
+.checkout-box{
+    background:white;
+    padding:30px;
+    max-width:600px;
+    margin:auto;
+}
+
+input{
+    width:100%;
+    padding:8px;
+    margin:10px 0;
+}
+
+.btn{
+    display:block;
+    text-decoration:none;
+    background:#f0c14b;
+    padding:12px;
+    border-radius:4px;
+    border:1px solid #a88734;
+    color:black;
+    font-weight:bold;
+    text-align:center;
+}
+
+</style>
+</head>
+<body>
+
+<div class="checkout-box">
+<h2>Delivery Address</h2>
+
+<input type="text" placeholder="Full Name">
+<input type="text" placeholder="Address">
+<input type="text" placeholder="City">
+<input type="text" placeholder="Pincode">
+
+<h3>Payment Method</h3>
+
+<input type="radio" name="pay"> Credit Card <br>
+<input type="radio" name="pay"> Debit Card <br>
+<input type="radio" name="pay"> UPI <br>
+<input type="radio" name="pay"> Cash on Delivery <br><br>
+
+<a href="confirmation.html" class="btn">Place Your Order</a>
+
+</div>
+
+</body>
+</html>

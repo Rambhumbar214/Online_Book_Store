@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shopping Cart</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background:#EAEDED;
+    padding:30px;
+}
+
+.cart-container{
+    display:flex;
+    gap:20px;
+}
+
+/* LEFT SIDE - ITEMS */
+.cart-box{
+    flex:3;
+    background:white;
+    padding:20px;
+    border-radius:5px;
+}
+
+.cart-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #ddd;
+    padding:15px 0;
+}
+
+.book-info{
+    flex:2;
+}
+
+.price{
+    color:#B12704;
+    font-weight:bold;
+}
+
+.qty{
+    width:50px;
+    padding:5px;
+}
+
+.remove{
+    color:#007185;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.remove:hover{
+    text-decoration:underline;
+}
+
+/* RIGHT SIDE - SUMMARY */
+.summary{
+    flex:1;
+    background:white;
+    padding:20px;
+    border-radius:5px;
+    height:fit-content;
+}
+
+.summary h3{
+    margin-top:0;
+}
+
+.total{
+    font-size:20px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.btn{
+    display:block;
+    text-decoration:none;
+    background:#f0c14b;
+    padding:12px;
+    border-radius:4px;
+    border:1px solid #a88734;
+    color:black;
+    font-weight:bold;
+    text-align:center;
+}
+
+.btn:hover{
+    opacity:0.9;
+}
+
+.continue{
+    margin-top:10px;
+    background:#e7e9ec;
+    border:1px solid #adb1b8;
+}
+
+@media(max-width:768px){
+    .cart-container{
+        flex-direction:column;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<h2>Shopping Cart</h2>
+
+<div class="cart-container">
+
+<!-- LEFT SIDE -->
+<div class="cart-box">
+
+<div class="cart-item">
+<div class="book-info">
+<h4>Mrityunjay</h4>
+<p>Shivaji Sawant</p>
+<span class="price">₹450</span>
+</div>
+<div>
+Qty: <input type="number" class="qty" value="1">
+<p class="remove">Delete</p>
+</div>
+</div>
+
+<div class="cart-item">
+<div class="book-info">
+<h4>Yayati</h4>
+<p>V. S. Khandekar</p>
+<span class="price">₹399</span>
+</div>
+<div>
+Qty: <input type="number" class="qty" value="2">
+<p class="remove">Delete</p>
+</div>
+</div>
+
+<div class="cart-item">
+<div class="book-info">
+<h4>Panipat</h4>
+<p>Vishwas Patil</p>
+<span class="price">₹480</span>
+</div>
+<div>
+Qty: <input type="number" class="qty" value="1">
+<p class="remove">Delete</p>
+</div>
+</div>
+
+</div>
+
+<!-- RIGHT SIDE SUMMARY -->
+<div class="summary">
+<h3>Order Summary</h3>
+<p>Items (4): ₹1,728</p>
+<hr>
+<p class="total">Subtotal: ₹1,728</p>
+
+<a href="checkout.html" class="btn">Proceed to Checkout</a>
+<a href="index.html" class="btn continue">Continue Shopping</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
