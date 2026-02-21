@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Choose Plan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{ font-family:Arial; background:#EAEDED; padding:30px; }
+.container{ max-width:700px; margin:auto; }
+.card{ background:white; padding:25px; margin-bottom:20px; border-radius:8px; box-shadow:0 3px 10px rgba(0,0,0,0.1); }
+button{ padding:10px 15px; border:none; border-radius:4px; cursor:pointer; font-weight:bold; }
+.basic{ background:#f0c14b; }
+.premium{ background:#FF9900; }
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>Select a Membership Plan</h2>
+
+<div class="card">
+    <h3>Basic Plan</h3>
+    <p>₹499 / month</p>
+    <button class="basic" onclick="selectPlan('Basic',499)">Choose Basic</button>
+</div>
+
+<div class="card">
+    <h3>Premium Plan</h3>
+    <p>₹999 / month</p>
+    <button class="premium" onclick="selectPlan('Premium',999)">Choose Premium</button>
+</div>
+
+<button onclick="goBack()">Back</button>
+</div>
+
+<script>
+function selectPlan(plan, price){
+    localStorage.setItem("plan", plan);
+    localStorage.setItem("price", price);
+
+    let expiry = new Date();
+    expiry.setMonth(expiry.getMonth()+1);
+    localStorage.setItem("expiry", expiry);
+
+    alert("Plan updated to " + plan);
+    window.location="dashboard.html";
+}
+
+function goBack(){
+    window.location="dashboard.html";
+}
+</script>
+
+</body>
+</html>

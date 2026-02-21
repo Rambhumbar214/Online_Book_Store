@@ -1,0 +1,145 @@
+<!--DOCTYPE html>
+<html>
+<head>
+<title>Invoice Details</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{ font-family:Arial; background:#EAEDED; padding:30px; }
+.container{ max-width:600px; margin:auto; }
+.card{ background:white; padding:25px; border-radius:8px; box-shadow:0 3px 10px rgba(0,0,0,0.1); }
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>Invoice Details</h2>
+
+<div class="card" id="invoiceBox"></div>
+
+<button onclick="goBack()">Back</button>
+</div>
+
+<script>
+let params = new URLSearchParams(window.location.search);
+let invoiceId = params.get("id");
+
+let invoices = JSON.parse(localStorage.getItem("invoices") || "[]");
+let invoice = invoices.find(i => i.id === invoiceId);
+
+if(invoice){
+    document.getElementById("invoiceBox").innerHTML = `
+        <p><b>Invoice ID:</b> ${invoice.id}</p>
+        <p><b>Amount:</b> ₹${invoice.amount}</p>
+        <p><b>Date:</b> ${invoice.date}</p>
+        <p><b>Payment Method:</b> ${invoice.method}</p>
+    `;
+}else{
+    document.getElementById("invoiceBox").innerHTML = "Invoice not found.";
+}
+
+function goBack(){
+    window.location="billing-advanced.html";
+}
+</script>
+
+</body>
+</html-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Invoice Details</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #EAEDED, #D6DBDF);
+        padding: 30px;
+    }
+    .container {
+        max-width: 650px;
+        margin: auto;
+    }
+    h2 {
+        text-align: center;
+        color: #2C3E50;
+        margin-bottom: 20px;
+        font-size: 28px;
+        text-shadow: 1px 1px 2px #BDC3C7;
+    }
+    .card {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        transition: transform 0.2s ease-in-out;
+    }
+    .card:hover {
+        transform: scale(1.02);
+    }
+    .invoice-img {
+        display: block;
+        margin: 0 auto 20px auto;
+        max-width: 120px;
+    }
+    p {
+        font-size: 16px;
+        margin: 8px 0;
+        color: #34495E;
+    }
+    b {
+        color: #2C3E50;
+    }
+    button {
+        display: block;
+        margin: 25px auto 0 auto;
+        padding: 12px 25px;
+        background: #3498DB;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    button:hover {
+        background: #1F618D;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>📚 Invoice Details</h2>
+
+    <div class="card" id="invoiceBox">
+        <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Book Icon" class="invoice-img">
+    </div>
+
+    <button onclick="goBack()">⬅ Back</button>
+</div>
+
+<script>
+let params = new URLSearchParams(window.location.search);
+let invoiceId = params.get("id");
+
+let invoices = JSON.parse(localStorage.getItem("invoices") || "[]");
+let invoice = invoices.find(i => i.id === invoiceId);
+
+if(invoice){
+    document.getElementById("invoiceBox").innerHTML += `
+        <p><b>Invoice ID:</b> ${invoice.id}</p>
+        <p><b>Amount:</b> ₹${invoice.amount}</p>
+        <p><b>Date:</b> ${invoice.date}</p>
+        <p><b>Payment Method:</b> ${invoice.method}</p>
+    `;
+}else{
+    document.getElementById("invoiceBox").innerHTML += "<p style='color:red;'>Invoice not found.</p>";
+}
+
+function goBack(){
+    window.location="billing-advanced.html";
+}
+</script>
+
+</body>
+</html>
